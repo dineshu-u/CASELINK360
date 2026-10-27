@@ -1,0 +1,135 @@
+:root {
+  /* Core Translucent Surfaces over Global AICTE Background */
+  --bg-canvas: #eaf2fb;
+  --bg-surface: rgba(255, 255, 255, 0.60);
+  --bg-surface-solid: rgba(255, 255, 255, 0.96);
+  --bg-subtle: rgba(236, 244, 253, 0.44);
+  --bg-hover: rgba(255, 255, 255, 0.68);
+
+  /* Institutional Navigation Rail (Preserved Navy) */
+  --bg-nav: #13293d;
+  --bg-nav-hover: #1a354e;
+  --bg-nav-active: #1f4262;
+  --nav-text: #d7e2ec;
+  --nav-text-muted: #93a8bc;
+  --nav-accent: #6cb0ff;
+
+  /* Ink & Typography — High-Contrast Tuned for Translucent Glass Surfaces */
+  --ink-primary: #0d1b2a;
+  --ink-secondary: #223549;
+  --ink-muted: #3d5269;
+
+  /* Primary Action (Preserved Institutional Blue) */
+  --accent-primary: #1a549c;
+  --accent-primary-hover: #13417b;
+  --accent-soft: rgba(226, 239, 254, 0.78);
+  --accent-border: #9bc0ec;
+
+  /* Structural Rules — Crisp Hairlines over Glass */
+  --border-subtle: rgba(176, 195, 216, 0.72);
+  --border-strong: rgba(145, 168, 194, 0.85);
+
+  /* Semantic Operational States */
+  --state-success-ink: #145a3d;
+  --state-success-bg: rgba(230, 246, 238, 0.88);
+  --state-success-border: #9bd4bc;
+
+  --state-warning-ink: #7a4b00;
+  --state-warning-bg: rgba(254, 245, 226, 0.90);
+  --state-warning-border: #ebcb8b;
+
+  --state-critical-ink: #991810;
+  --state-critical-bg: rgba(254, 236, 235, 0.90);
+  --state-critical-border: #eba9a4;
+
+  --state-info-ink: #16467e;
+  --state-info-bg: rgba(231, 241, 253, 0.88);
+  --state-info-border: #a5c6ee;
+
+  --state-neutral-ink: #2c3d50;
+  --state-neutral-bg: rgba(236, 242, 249, 0.86);
+  --state-neutral-border: #bdcad9;
+
+  /* Typography */
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Harmonised Semantic Aliases */
+  --text-primary: var(--ink-primary);
+  --text-secondary: var(--ink-secondary);
+  --text-muted: var(--ink-muted);
+  --accent: var(--accent-primary);
+  --danger: var(--state-critical-ink);
+  --warning: var(--state-warning-ink);
+  --ai-accent: var(--state-info-ink);
+  --ai-soft: var(--state-info-bg);
+  --ai-border: var(--state-info-border);
+  --border-default: var(--border-strong);
+  --shadow-md: 0 14px 32px rgba(13, 27, 42, 0.14);
+
+  /* Claymorphism: soft puffy surfaces with inner highlight + inner shade */
+  --shadow-clay: 0 14px 28px rgba(19, 41, 61, 0.09), 0 4px 10px rgba(19, 41, 61, 0.05),
+    inset 0 2px 3px rgba(255, 255, 255, 0.85), inset 0 -4px 8px rgba(26, 84, 156, 0.05);
+  --shadow-clay-sm: 0 4px 10px rgba(19, 41, 61, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 0.9),
+    inset 0 -2px 5px rgba(26, 84, 156, 0.06);
+  --shadow-clay-inset: inset 2px 2px 6px rgba(19, 41, 61, 0.08),
+    inset -1px -1px 3px rgba(255, 255, 255, 0.85);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+
+  /* Rhythm & Geometry */
+  --topbar-height: 56px;
+  --sidebar-width: 248px;
+  --sidebar-collapsed-width: 64px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
